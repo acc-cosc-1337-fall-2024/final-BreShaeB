@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "die.h"
 #include "roll.h"
+#include "shooter.h"
 using std::cout;
 
 TEST_CASE("Verify Test Configuration", "verification") {
@@ -32,4 +33,19 @@ TEST_CASE("Verify that rolled_value is returning a value between 2-12"){
         REQUIRE(result <= 12);
     } 
 
+}
+
+TEST_CASE("Verify that shooter returns a Roll and that the roll is from 2-12"){
+
+    Shooter roll;
+
+    std::vector<Roll*> rolls;
+
+    for (int i = 0; i < 10; i++){
+
+        int die1 = 0, die2 = 0;
+        Roll* roll = new Roll(die1, die2);
+        roll->roll_dice();  // Perform the roll
+        rolls.push_back(roll);  // Add the Roll pointer to the vector
+    }
 }
