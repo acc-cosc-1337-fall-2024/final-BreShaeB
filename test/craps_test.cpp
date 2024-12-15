@@ -3,6 +3,9 @@
 #include "die.h"
 #include "roll.h"
 #include "shooter.h"
+#include "come_out_phase.h"
+#include "phase.h"
+#include "point_phase.h"
 using std::cout;
 
 TEST_CASE("Verify Test Configuration", "verification") {
@@ -49,3 +52,16 @@ TEST_CASE("Verify that shooter returns a Roll and that the roll is from 2-12"){
         rolls.push_back(roll);  // Add the Roll pointer to the vector
     }
 }
+
+TEST_CASE("Verify that ComeOutPhase get outcomes returns values RollOutcome::natural, RollOutcome::craps, and RollOutcome::point"){
+
+    //Phase* phase = new PointPhase(7, 4);
+    
+    //PointPhase* phase = new PointPhase;
+    //Phase* phase = new PointPhase;
+    //ComeOutPhase roll_outcome(x);
+    //phase.get_outcome(7);
+    //roll_outcome(7);
+
+}
+
